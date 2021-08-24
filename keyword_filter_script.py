@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import numpy as np
+import streamlit
 
 
 uploaded_file = st.file_uploader("Choose a file")
