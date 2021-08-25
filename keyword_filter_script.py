@@ -6,7 +6,7 @@ import io
 import time
 
 def main():
-	st.title("Keyword Filter Tool")
+	st.title("Gaming Keyword Filter Tool")
 	st.text('Filter out all the irrelevant keywords from your downloads from your favourite keyword research tools!')
 	st.text('Make sure that the CSV contains a column titled \'Keyword\'. \'KEYWORD\' won\'t work. The keyword column is essential, otherwise the file won\'t work.')
 	st.text('Once uploaded, go grab a brew (preferably something soft) while the file is being processed.')
