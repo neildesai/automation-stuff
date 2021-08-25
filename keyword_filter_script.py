@@ -3,6 +3,7 @@ import pandas as pd
 import re
 import base64
 import io
+import time
 
 def main():
 	st.title("Keyword Filter Tool")
@@ -296,6 +297,10 @@ def main():
 		st.markdown('### **⬇️ Download output CSV File **')
 		href = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (right-click and save as ".csv")'
 		st.markdown(href, unsafe_allow_html=True)
+		my_bar = st.progress(0)
+		for percent_complete in range(100):
+			time.sleep(0.1)
+			my_bar.progress(percent_complete + 1)
 
 
 
