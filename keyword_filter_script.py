@@ -8,6 +8,10 @@ import time
 def main():
 	st.title("Keyword Filter Tool")
 	st.text('Filter out all the irrelevant keywords from your downloads from your favourite keyword research tools!')
+	st.text('Make sure thath the CSV contains a column titled 'Keyword'. 'KEYWORD' won\'t work.')
+	st.text('Once uploaded, go grab a brew (preferably something soft) while the file is being processed.')
+	
+	
 	uploaded_file = st.file_uploader("Choose a file")
 	if uploaded_file is not None:
 		df = pd.read_csv(uploaded_file)
@@ -297,10 +301,7 @@ def main():
 		st.markdown('### **⬇️ Download output CSV File **')
 		href = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (right-click and save as ".csv")'
 		st.markdown(href, unsafe_allow_html=True)
-		my_bar = st.progress(0)
-		for percent_complete in range(100):
-			time.sleep(0.1)
-			my_bar.progress(percent_complete + 1)
+
 
 
 
